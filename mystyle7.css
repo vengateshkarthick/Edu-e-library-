@@ -1,0 +1,470 @@
+.body{
+    margin:0;
+    padding:0;
+    font-family: sans-serif,monospace;
+}
+  
+  
+    #nav-bar{
+        display:flex;
+        
+        border-radius:10px;
+        border-top:2px solid whitesmoke;
+        border-left: 2px solid whitesmoke;
+        border-right: 2px solid whitesmoke;
+
+          border-bottom:2px solid whitesmoke;
+              background-color:white;
+        /*border-top-width:2px;
+    border-top-color:transparent;
+    border-bottom-width:2px;
+    border-bottom-color:transparent;
+    */
+        height:70px;
+        width:100%;
+        font-size:25px;
+        font-weight:600;
+        font-family: 'Play',serif;
+        text-align: left;
+        align-content: space-around;
+    
+     
+    }
+    #nav-bar ul{
+     
+        display:inline-flex;
+       padding:12px;
+        
+        font-family:'Play',serif;
+        margin-left:30%;
+        
+        }
+        @media only screen and (max-width:800px){
+            #nav-bar ul {
+                margin-left:10%;
+               
+                }
+        }
+   #nav-bar li{
+       list-style-type: none;
+       cursor: pointer;
+       padding:20px;
+       padding-top:4px;
+       color:black;
+       font-size:5px;
+       transform:translateY(-50%);
+       justify-content: space-evenly ;
+   }
+       #nav-bar li i{
+           font-size:34px;
+           border-radius: 50px;
+      
+           }
+           #nav-bar li i:hover{
+               color:#fa6e81;
+               box-shadow:4px 2px 2px 4px whitesmoke;
+           }
+           @media only screen and (max-width:800px){
+            #nav-bar li i{
+                font-size:20px;
+            }
+            
+        }
+
+    #menu_icon{
+        cursor:pointer;
+    }
+    @media only screen and (max-width:800px){
+        #nav-bar #menu_icon{
+            font-size:20px;
+        }
+        
+    }
+    .menu_links{
+        display:none;
+        transition: ease-in-out;
+        transition-property: display;
+        transition-delay: 0.3ms;
+        transition-duration: 20s;
+        
+    }
+
+    .menu_linksshow{
+        display: inline-block;
+        transition: ease-out;
+        transition-property: display;
+        transition-delay: 0.3ms;
+        transition-duration: 20s;
+        
+        
+    }
+    #menu-links{
+        z-index: 1;
+        position: absolute;
+        background-color: white;
+        border:2px solid white;
+        box-shadow:4px 4px 4px 4px whitesmoke;
+        height:100vh;
+        width:35%;
+        
+    }
+    @media only screen and (max-width:800px){
+        #menu-links{
+            width:60%;
+        }
+        }
+    #menu-links ul{
+        display:block;
+        margin:20px;
+        width:86%;
+    }
+    @media only screen and (max-width:800px){
+        #menu-links ul{
+            width:100%;
+           
+            }
+    }
+    
+    #menu-links ul li{
+        position:relative;
+        padding:15px;
+        color:black;
+        cursor: pointer;
+        margin-top:12px;
+        margin-bottom:15px;
+        font-size:25px;
+        font-family:'PTSans',serif;
+        font-weight:600;
+
+        list-style-type:none;
+        
+    }
+    @media only screen and (max-width:800px){
+        #menu-links ul li{
+            font-size: 20px;
+            padding:12px;
+            margin-left:12px;
+            margin-right:33%;
+            width:75%;
+        }
+
+    }
+    
+    #menu-links ul li:hover{
+        background-color:#fa909e;
+        color:white;
+        border-bottom-right-radius: 24px;
+        border-top-right-radius: 24px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    @media only screen and (max-width:800px){
+        #menu-links ul li:hover{
+            border-bottom-right-radius: 24px;
+        border-top-right-radius: 24px;
+        border-bottom-left-radius: 24px;
+        border-top-left-radius: 24px;
+        }
+
+    }
+    #menu-links ul li i{
+        margin:5px;
+        padding-right:15px;
+    }
+    @media only screen and (max-width:800px){
+    #menu-links ul li i{
+        margin:4px;
+        padding-right:10px;
+    }
+}
+    #menu_icon{
+        padding:10px;
+        cursor: pointer;
+        font-size:30px;
+        margin-left:12px;
+
+    }
+    #nav-bar span{
+        gap: 1rem;
+        margin:10px 6px;
+        padding-left:14px;
+        flex-basis:50%;
+        font-size:32px;
+    }
+    @media only screen and (max-width:800px){
+        #nav-bar .heading{
+            font-size:15px;
+        }
+        
+    }
+
+ 
+
+
+    .e-library{
+        display:flex;
+        flex-wrap:wrap;
+        padding:0;
+        margin:0;
+        position:relative;
+        overflow: hidden;
+
+
+    }
+    .e-library img{
+        width:700px;/*width;400px and height 440in @media query*/
+        height:520px;
+        border-radius:10px;
+        
+        transform: translateX(-100%);
+            transition: transform 1s ease-in-out ;
+            transition-delay: 0.5ms;
+        
+        }
+        @media only screen and (max-width:800px){
+            .e-library img{
+                width:500px;
+                height:400px;
+               
+                }
+        }
+
+        @media only screen and (max-width:500px){
+            .e-library img{
+                height:200px;
+                width:200px;
+                
+                
+
+            }
+        }
+        .e-library .e-library-content{
+            transform: translateX(100%);
+            transition: transform 0.2s ease ;/*add duration 0.6s in small width*/
+            transition-delay: 1ms;
+            flex:1 1 300px;
+            /*width:400; add this in media qurey*/
+            padding:30px;
+            margin-top:20px;
+        }
+        @media only screen and (max-width:800px){
+            .e-library .e-library-content {
+                width:400px;
+                }
+        }
+        .e-library .e-library-content h2{
+            font-size:40px;/*give 28 in media query*/
+            font-weight: 600;
+            font-family:'PTSans';
+            line-height: 50px;
+
+        }
+        @media only screen and (max-width:800px){
+            .e-library .e-library-content h2{
+                font-size:28px;
+               
+                }
+        }
+        @media only screen and (max-width:500px){
+            .e-library .e-library-content h2
+                {
+                    font-size:20px;
+                
+                                
+                
+
+            }
+        }
+
+        .e-library .e-library-content div{
+            margin-top:10px;
+            padding:4px;
+            font-size:44px;
+            font-weight: 600;
+            line-height: 60px;
+            font-family:'Play';
+            font-stretch:ultra-expanded;
+
+        }
+        @media only screen and (max-width:800px){
+            .e-library .e-library-content div{
+                font-size:28px;
+                font-family: serif;
+                }
+        }
+        .e-library .e-library-content #span4{
+
+            background-color: #ffcc33;
+            height:4px;
+            width:180px;
+            border-radius:10px;
+            border:1px solid whitesmoke;
+
+        }
+        @media only screen and (max-width:800px){
+            .e-library .e-library-content #span4{
+                width:400px;
+               
+                }
+        }
+        .e-library .e-library-content button{
+            border-radius:50px;
+            
+            background-color:white;
+            outline:none;
+            cursor:pointer;
+            padding:20px;
+            border:2px solid rgb(43, 42, 42);
+            transition:background-color 0.1s ease-in;
+            transition-delay: 0.5ms;
+            font-family:'PLay';
+            font-weight: 600;
+            font-size:20px;
+            color:black;
+            text-decoration: none;
+            
+
+        }
+        @media only screen and (max-width:800px){
+            .e-library .e-library-content button{
+                font-size:20px;
+                 border-radius:14px;
+                 padding:14px;
+                }
+        } 
+        @media only screen and (max-width:500px){
+            .e-library .e-library-content button{
+                font-size:16px;
+                 border-radius:10px;
+                 padding:10px;
+                }
+        } 
+        
+    .place-elibcard{
+        display:flex;
+        margin:auto;
+        flex-wrap:wrap;
+        padding:0;
+        margin:0;
+        position:relative;
+        overflow: hidden;
+        font-family:sans-serif,serif,'Play','PTSans';
+    }
+    .place-elibcard .place-ecard-contents{
+        flex:1 1 300px;
+        margin:auto;
+        margin-top:20px;
+        padding:30px;
+    }
+    @media only screen and (max-width:800px){
+        .place-elibcard .place-ecard-contents {
+            flex-basis: 200px;
+           
+            }
+    }
+    .place-elibcard .place-ecard-contents h2{
+        font-size:44px;/*give this in media query 32*/
+        font-family:'Play';
+        font-weight:600;
+        line-height:55px;
+        margin-right:25px;
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:4px;
+        padding-top:4px;
+
+
+    }
+    @media only screen and (max-width:800px){
+        .place-elibcard .place-ecard-contents h2{
+            font-size:28px;
+            padding-left: 14px;
+            }
+    }
+    @media only screen and (max-width:500px){
+        .place-elibcard .place-ecard-contents h2{
+            font-size:20px;
+            padding-left: 10px;
+            }
+    }
+    .place-elibcard .place-ecard-contents h2 #span5{
+            background-color: #ffcc33;
+            height:10px;
+            width:300px;
+            border-radius:5px;
+            border:2px solid white;
+            margin-top:10px;
+            margin-bottom: 4px;
+    }
+    @media only screen and (max-width:800px){
+        .place-elibcard .place-ecard-contents #span5{
+            width:400px;
+           
+            }
+    }
+    .place-elibcard .place-ecard-contents h2 div span{
+        font-size:40px;
+        font-family: 'PTSans',sans-serif;
+        top:50px;
+    }
+    @media only screen and (max-width:800px){
+        .place-elibcard .place-ecard-contents h2 div span{
+            font-size:28px;
+           
+            }
+    }
+   
+    
+    .place-elibcard .place-ecard-contents button{
+        border-radius:12px;
+            font-size:20px;
+            font-family:'Play';
+            background-color:#fcc727;/*#ff3859;*/
+            outline:none;
+            cursor:pointer;
+            padding:20px;
+            border:2px solid white;
+            
+            color:white;
+            margin:15px;
+            margin-top:4px;
+            font-weight:600;
+            transition:background-color 0.1s ease-in;
+            transition-delay: 0.5ms;
+
+    }
+    
+    @media only screen and (max-width:800px){
+        .place-elibcard .place-ecard-contents button{
+            font-size:16px;
+            border-radius:10px;
+            padding:10px;
+           
+            }
+    }
+
+    .place-elibcard img{
+    height:450px;/*use 150*1150 in mobile //350*250==height*width*/
+    width:400px;
+    padding:10px;
+    border-radius:10px;
+
+    }
+    @media only screen and (max-width:800px){
+        .place-elibcard img{
+            height:200px;
+            width:200px;
+            transform:translateY(60%);
+            
+            }
+        }
+            @media only screen and (max-width:500px){
+                .place-elibcard img{
+                    height:160px;
+                    width:160px;
+                     transform:translateY(10%);
+                    margin-bottom:10px;
+
+                }
+
+            }

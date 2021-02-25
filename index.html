@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Fries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle7.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<nav id="topnav">
+           
+<div class="nav-bar" id="nav-bar">
+            <span class="heading">
+                
+            <button id="menu_btn" style="outline: none; background-color:transparent;  border:none;">
+                <i class="fa fa-bars" id="menu_icon"></i>
+            </button>
+            
+           Edubox-elib
+        </span>
+<!--menu navigation bar-->
+    <ul>
+      <a href="./product1_createform.html" id="elibcardlink" style="text-decoration:none;">
+            <li>
+                <i class="fa fa-id-card-o" aria-hidden="true" title="elibcard"></i>
+                
+            </li>
+        
+        </a>
+        <a href="./place_form.html" id="placelink" style="text-decoration:none;">
+                <li>
+                    <i class="fa fa-book" aria-hidden="true" title="place"></i>
+                
+                </li>
+        </a>
+
+        <a href="#" id="helplink" style="text-decoration:none;">
+                <li>
+                    <i class="fa fa-question-circle" aria-hidden="true" title="Help"></i>
+            
+                </li>
+        </a>
+    </ul>
+</div>
+    <!--menu links-->
+    <div id="menu-links" class="menu_links">
+                <ul>
+            <a href="./place_form.html" id="search" style="text-decoration:none;"> 
+                <li>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                        Search for book
+                </li>
+             </a>
+             <a href="#" id="about" style="text-decoration:none;">
+                     <li>
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                E-libcard
+                    </li>
+              </a>
+
+            <a href="./product1_createform.html" id="elibcardlink" style="text-decoration:none;">
+                <li>
+                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                        Create a new card
+                </li>
+            </a>
+            <a href="./place_form.html" id="placelink" style="text-decoration:none;">
+                    <li>
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        Place a book
+                    </li>
+            </a> 
+            <a href="#" id="helplink" style="text-decoration:none;">   
+                    <li>
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        Help
+                    </li>
+            </a>
+                 </ul>
+            </div>
+    </nav>
+
+<!--navigation bar ends-->
+<!--creating a elibray card-->
+<div>
+    <div class="e-library" id="e-library" onmouseover="myfunction()">
+        <img src="images1/20.jpg" id="img1" >
+        <div class="e-library-content" id="e1">
+            <h2>
+                Place the book with your card.
+                <div id="span4"></div>
+                <div >Digital Library...</div>
+                Genrate your E-card here.
+
+                
+            </h2>
+            <a href="./product1_createform.html" style="text-decoration: none;color:none;">
+            <button id="ripple_btn1" onclick="response_btn()">Create</button>
+             </a>
+        </div>
+
+    </div>
+
+
+</div>
+<!--for placing a book-->
+    <div class="place-elibcard">
+        
+        <div class="place-ecard-contents">
+            <h2>
+                Place your book from your place,
+                <div id="span5"></div>
+                <div>Get everything in your</div> 
+                
+                <div><span>E-libcard.</span></div>
+            
+            </h2>
+            <a href="./place_form.html" style="text-decoration: none;color:none;">
+
+            <button id="ripple_btn2">Place</button>
+            </a>
+        </div>
+
+        <img src="images1/digitalbooks6.jpg">
+
+    </div>
+
+    <footer style="border-radius: 5px; border:4px dotted peachpuff;height:270px; display:flex;">
+
+        
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Script using Jquery-->
+    <script>
+        var flag1,flag2;
+        flag1=false;
+        flag2=false;
+        
+        /*function show_menu(){
+            var id=document.getElementById("menu-links");
+            id.style.display="none";
+        }*/
+         function myfunction(){
+                var img_div=document.getElementById("img1");
+                img_div.style.transform="translateX(0)";
+                var content_e1=document.getElementById("e1");
+                content_e1.style.transform="translateX(0)";
+    
+        }
+        $(document).ready(function(){
+           $("#menu_btn").click(function show_links() {
+                /*1.toogle b/w inline-block and none
+                2. change the menu icon to close icon
+                3.checks for the disaplay if none then icon changed back to barsicon*/
+                $(".menu_links").toggleClass("menu_linksshow");
+                 
+                 
+                
+                $("#menu_icon").removeClass("fa fa-bars").addClass("fa fa-times-circle-o");
+                var mnu_links_Class=document.getElementById("menu-links").className;
+                if(mnu_links_Class=="menu_links"){
+                $("#menu_icon").removeClass("fa fa-times-circle-o").addClass("fa fa-bars");
+
+
+                }
+            });
+            
+            
+       $("#ripple_btn1").click(function response_btn(){
+           $(this).css("opacity","30%");
+           $(this).css("boxShadow","rgba(0,0,0,0.5) 0 5px 5px 0");
+           $(this).css("transistion","0.5s");
+           $(this).css("transistionDuration","0.2ms");
+           $(this).css("transitionDelay","0.2ms");
+           $(this).css("transitionTimingFunction","ease-out");
+            flag1=true;
+       }); 
+    
+       $("#ripple_btn2").click(function response_btn(){
+           $(this).css("opacity","30%");
+           $(this).css("boxShadow","rgba(0,0,0,0.5) 0 5px 5px 0");
+           $(this).css("transistion","0.5s");
+           $(this).css("transistionDuration","0.2ms");
+           $(this).css("transitionDelay","0.2ms");
+           $(this).css("transitionTimingFunction","ease-out");
+            flag2=true;
+
+            
+       }); 
+       $("#ripple_btn1").hover(function ripple_recall(){
+           /* Creating a flag to check whether the button is  triggered for click event based 
+           on that hover effect changes*/
+           if(flag1){
+               // hover after click event is called
+        $(this).css("backgroundColor","white");
+        $(this).css("borderStyle","solid");
+        $(this).css("borderColor","rgb(43,42,42)");
+        $(this).css("borderRadius","1.5");
+        $(this).css("color","black");
+        $(this).css("boxShadow","white");
+           }
+           else{
+                 //hover effect before click event
+            $(this).css("backgroundColor","#ffcc33");
+            $(this).css("borderColor","transparent");
+            $(this).css("color","white");
+           }
+            });
+       $("#ripple_btn2").hover(function ripple_recall(){
+           /* Creating a flag to check whether the button is  triggered for click event based 
+           on that hover effect changes*/
+           if(flag2){
+                // hover after effect  changes
+        $(this).css("backgroundColor","white");
+        $(this).css("borderStyle","solid");
+        $(this).css("borderColor","rgb(43,42,42)");
+        $(this).css("borderRadius","1.5");
+        $(this).css("color","black");
+        $(this).css("boxShadow","white");
+           }
+           else{ 
+               //hover before effect changes
+            $(this).css("backgroundColor","white");
+            $(this).css("borderColor","rgb(43,42,42)");
+            $(this).css("color","black");
+           }
+            });
+});
+        /*var mn_links_class = document.getElementById("menu-links").className;
+        if(mn_links_class=="menu_links_show")
+
+        
+               function show_menu(){
+           document.getElementById("menu_links").style.display="inline-block";
+            menu_id.classList.toggle("fa fa-times-circle");
+
+       }
+        
+          the JS script functioons has been modified to JQuery from JS if need to code 
+          in JS do document.getElement()-methods to full fill it.
+        get its id and do the same changes
+            transition:active 0.5s ease-out;
+            box-shadow: rgba(0,0,0,0.5) 0 5px 10px 0;
+            filter:opacity(30%);
+            btn1.style.filter="opacity(30%)";
+            btn1.style.boxShadow="rgba(0,0,0,0.5) 0 5px 5px 0";
+            btn1.style.transitionDuration="0.5s";
+            btn1.style.transitionDelay="0.2ms"
+            btn1.style.transitionTimingFunction="ease-out";*/
+            
+            //btn1.onmouseover=ripple_recall(document.getElementById(this)); 
+            /*background-color:white;
+            
+            color:black;
+            
+            border-color: rgb(43, 42, 42);*/
+            //btn1.onmouseover=ripple_recall(document.getElementById(this));
+    </script>
+</body>
+</html>

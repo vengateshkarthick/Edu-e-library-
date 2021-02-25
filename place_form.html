@@ -1,0 +1,349 @@
+<!DOCTYPE html> 
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>French Fries</title>
+        <style>
+            .whole{
+                
+                background-color:white;
+                border:2px solid peachpuff;
+            }
+            /* form2,3  width 324 ,height 495---
+            media query for 800px should  be made separetly */
+            .form_heading{
+                display:inline-block;
+                width:750px;
+                margin-left:21%;/*fix margin less than 15px  in media query*/
+                padding:10px;
+                border:2px solid transparent;
+
+            }
+            
+            .form_heading h2{
+                display:flex;
+                
+            }
+            .form_heading h2 li{
+                list-style-type: none;
+                padding:10px 8px;
+                
+                font-family: sans-serif;
+                
+                margin:auto;
+
+            }
+            .form_heading  h2 li::after{
+
+                content:" ";
+                border-radius: 14px;
+                width:100%;
+                height:12px;
+                background-color:#fa6e81;
+                position:relative;
+                margin:auto;
+                display:inline-flex;
+
+
+}
+            .form_block{
+                display:flex;
+                width:350px;
+                
+                border:2px solid transparent;
+                flex-basis:1 1 300px;
+                margin:auto;
+
+            }
+            
+            .form2 {
+                
+                
+                margin:20px;
+                border:2px solid white;
+                width:300px;
+                padding:10px;
+                flex-basis: 1 0 300px;
+                border-radius:24px;
+            }
+            input:invalid{
+                color:red;
+            }
+            input{
+                padding:10px 12px;
+                margin:12px;
+                display:inline-block;
+                font-family:sans-serif;
+                font-size:18px;
+                border:1px solid black;
+                /* give on mouseenterborder:2px solid #5dc1e9;*/
+
+
+            }
+            label{
+                margin:5px 10px;
+                color:white;
+                font-weight: bold;
+            }
+            #form2 label{
+                color:#fa6e81;
+            }
+            
+            i{
+                color:black;
+            }
+            #form2 a{
+                text-decoration-style: none;
+            }
+            .searchform{
+                padding:12px;
+                margin:6px;
+                border: 2px solid white;
+                
+            }
+            .searchform input{
+                border-color:rgb(255, 211, 129);
+            }
+            .searchform #search_opt {
+                display: flex;
+            }
+            #search_form label{
+                color:#fa6e81;
+                margin-top:8px ;
+                
+            }
+            #opt_span{
+                display: flex;
+            }
+            
+             #search_form input[type=radio]{
+                
+                height:20px;
+                width:20px;
+            
+                cursor: pointer;
+
+                border: 2px solid dodgerblue;
+
+            }
+            #search_form i{
+                border-radius: 50%; 
+                padding:12px; 
+                background-color: #ffcc33;
+                color:white;
+                font-weight: bold;
+                font-size:20px;
+                cursor:pointer;
+            }
+            #search_result{
+                display:inline-flex;
+                flex-wrap: wrap;
+            }
+            #search_result,th,tr{
+                
+                border:2px solid peachpuff; 
+                font-size: 22px;
+                padding:14px 15px;
+                
+            }
+            th{
+                flex:1 1 100px;
+                width:200px;
+            }
+            
+
+        </style>
+
+
+
+    </head>
+    <body>
+        <div class="searchform" id ="search_form">
+            <label style=" font-family: Serif; font-size:30px;; font-weight:bold;display:block;">
+                Search For Book Details
+            </label>
+            <input type="text"   placeholder="" id="key" name="key_val" style="border-radius:24px;" size=25>
+            <i class="fa fa-search" aria-hidden="true" id="search_icon"></i>
+            <div id="search_opt">
+                <span id="opt_span">
+                <input type="radio" id="radio1" name="search_opt1" value="Field">
+                
+                <label style=" font-family: Serif;font-size:22px;; font-weight:bold;display:block;">
+                Field
+                </label>
+                </span>
+                <span id="opt_span">
+                <input type="radio" id="radio2" name="search_opt2" value="Author"> 
+                
+                <label style=" font-family: Serif;font-size:22px;; font-weight:bold;display:block;">
+                 Author
+                </label>
+                </span>
+                <span id="opt_span">
+                <input type="radio" id="radio3" name="search_opt3" value="Book_Title"> 
+            
+                <label style=" font-family: Serif;font-size:22px;; font-weight:bold;display:block;">
+                Book Title
+                </label>
+                </span>
+
+                <span id="opt_span">
+                <input type="radio" id="radio4" name="search_opt4" value="Anykey"> 
+                
+                <label style=" font-family: Serif;font-size:22px;; font-weight:bold;display:block;">
+                Anykey
+                </label>
+                </span>
+
+
+            </div>
+            <table id="search_result">
+                    <tr>
+                        <th>
+                            None
+                        </th>
+                    
+                    
+                        <th>
+                            None
+
+                        </th>
+                    
+                    
+                        <th>
+                            None
+                        </th>
+                    
+                    
+                    
+                        <th>
+                            None
+                        </th>
+                    </tr>
+                    
+
+
+                
+            </table>
+        </div>
+        <div class="whole">
+           
+    
+    
+    
+    
+    
+            
+    
+        <div class="form_heading">
+            <h2>
+                
+                <li>
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    Place
+                </li>
+                
+            </h2>
+        </div>
+
+       
+
+        <div class="form_block">
+            
+        <!-- Give tabindex in descending order after all form is created.
+             In backend create Tables for Book,Students,Placed books,confirm ,books returned.
+            
+            
+            Form 1. for creating an elibcard [rollno, Class, mailid, phoneno]
+
+            Form 2. for placing  a book if available.[rollno, mailid , date]
+            Form 3. Confirm placing while Taking. conditon after half day from placing book status changes to "UNAVAILABLE"
+            Form 4. While returning  [entering the book id with date ]// Admin should do. display students record and books so far taken.
+        -->
+       
+        
+       <!-- make responsive css style-->
+
+                 <div class="form2" id=form2>
+
+                    <form method="POST" action="#">
+                       <label id="label" style="font-family: Serif;font-size:22px;; font-weight:bold;display:block;">Rollno</label>
+                       <input type="text" placeholder="1896754320" required pattern="[0-9]{9}" maxlength="9"  id="rollno" name="rollno">
+                       
+                       
+                       <label id="label" style="font-family: Serif;font-size:22px;; font-weight:bold;display:block;">Email</label>
+                       <input type="email" required placeholder="bhc_id@bhc.edu.in" pattern="*@*[a-z].*" id="mailid" name="mailid">
+                        
+
+                       <label id="label" style="font-family: Serif;font-size:22px;; font-weight:bold;display:block;">Book E-ID</label>
+                       <input type="text" required  placeholder="Book_E-ID" id="bookid" name="bkid">
+   
+                       <label id="label" style="font-family: Serif;font-size:22px;; font-weight:bold;display:block;">Book Name</label>
+                       <input type="text" required placeholder="Book_Title" id="bookname" name="bkname">
+   
+                       
+                       <a href="confirm.html">
+                           <input type="submit" value="Place" id="plcbtn"
+                       
+                       style="cursor:pointer;  background-color:#4eb3db
+                       ;
+                       color:white; font-family:sans-serif; 
+                       font-size: 20px; font-weight:bold;border-radius:14px;
+                       border:2px solid #4eb3db; outline:none;">  
+                        </a>             
+
+   
+   
+   
+   
+                    </form>
+   
+
+           </div><!-- form 2 ends-->
+
+           
+        </div><!--form block-ends-->
+
+    </div>
+        <script>
+             $(document).ready(function(){
+           
+            
+       $("#plcbtn").click(function response_btn(){
+           $(this).css("opacity","30%");
+           $(this).css("boxShadow","rgba(0,0,0,0.5) 0 5px 5px 0");
+           $(this).css("transistion","0.5s");
+           $(this).css("transistionDuration","0.2ms");
+           $(this).css("transitionDelay","0.2ms");
+           $(this).css("transitionTimingFunction","ease-out");
+            
+       }); 
+       $("#search_icon").click(function response_btn(){
+           $(this).toggleClass(".fa fa-spinner fa-pulse fa-3x ");
+           $(this).css("opacity","30%");
+           
+           /*$(this).css("transistion","0.5s");
+           $(this).css("transistionDuration","0.2ms");
+           $(this).css("transitionDelay","0.2ms");
+           $(this).css("transitionTimingFunction","ease-out");*/
+
+            
+       }); 
+    
+       
+             });
+        </script>
+    
+
+    </body>
+
+
+
+
+
+</html>
+
+
